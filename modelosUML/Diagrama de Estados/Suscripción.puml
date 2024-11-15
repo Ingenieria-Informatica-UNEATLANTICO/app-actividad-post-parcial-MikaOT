@@ -1,0 +1,5 @@
+@startuml
+[*] --> Perfil
+Perfil --> Perfil1 : Suscribe/regala
+Perfil1 --> [*]
+@enduml
