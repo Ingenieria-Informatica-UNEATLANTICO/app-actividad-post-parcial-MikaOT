@@ -1,0 +1,14 @@
+@startuml
+title Flujo de Navegación de Usuario Anónimo
+state c1 <<choice>>
+state c2 <<choice>>
+
+[*] --> Anonimo : Inicio
+Anonimo --> c1 : Realiza búsqueda
+c1 --> Categoria : Selecciona categoría
+c1 --> Perfil : Selecciona perfil
+Categoria --> c2 : Visualiza
+Perfil --> c2 : Visualiza
+c2 --> Contenido : Muestra contenido
+Contenido --> [*] : Fin
+@enduml
