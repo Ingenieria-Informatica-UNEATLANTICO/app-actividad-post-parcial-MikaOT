@@ -1,8 +1,5 @@
 @startuml
 title Gestión de Sanciones por Incumplimiento de Normas
-plantuml
-Copiar código
-
 state c1 <<choice>>
 
 [*] --> Perfil : Revisión
