@@ -1,0 +1,23 @@
+@startuml
+Title Diagrama de clases 
+class Usuarios
+class Anonimo
+class Perfil
+class Suscripción
+class Búsqueda
+class Algoritmo
+class Categoria
+class Contenido
+
+Anonimo --> Usuarios : Puede ser
+Perfil --> Usuarios : Puede ser
+Usuarios --> Búsqueda : Busqueda con prompt
+Algoritmo --> Búsqueda : Emplea
+Búsqueda --> Categoria 
+Busqueda --> Contenido
+Contenido --> Categoria : Pertenece
+Contenido --> Perfil : Pertenece
+Suscripción --> Perfil
+Algoritmo ...> Usuarios : Puede ser
+
+@enduml
