@@ -1,0 +1,13 @@
+@startuml
+state c1 <<choice>>
+state c2 <<choice>>
+
+[*] --> Anonimo
+Anonimo --> c1 : Buscar
+c1 --> Categoria
+c1 --> Perfil
+Categoria --> c2
+Perfil --> c2
+c2 --> Contenido : Muestra
+Contenido --> [*]
+@enduml
