@@ -1,0 +1,29 @@
+@startuml
+Title Diagrama de Clases Mejorado
+class Anonimo
+class Usuario
+class Perfil
+class Búsqueda
+class Categoria
+class Contenido
+class Suscripción
+class Algoritmo
+Class Comentario
+Class ListaDeReproducción
+
+Anonimo --> Usuario : Puede ser
+Perfil --> Usuario : Es una
+Usuario --> Búsqueda : Realiza
+Búsqueda --> Contenido : Encuentra
+Búsqueda --> Categoria : Filtra
+Contenido --> Categoria : Pertenece
+Contenido --> Perfil : Es creado por
+Suscripción --> Perfil : Asocia
+Perfil --> ListaDeReproducción : Administra
+ListaDeReproducción --> Contenido : Contiene
+Comentario --> Contenido : Relaciona
+Comentario --> Usuario : Escrito por
+Algoritmo --> Búsqueda : Optimiza
+
+
+@enduml

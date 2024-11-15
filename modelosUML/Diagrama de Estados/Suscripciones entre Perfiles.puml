@@ -1,0 +1,6 @@
+@startuml
+title Suscripciones entre Perfiles
+[*] --> Perfil : Usuario accede
+Perfil --> Perfil1 : Realiza suscripción/regalo
+Perfil1 --> [*] : Fin
+@enduml

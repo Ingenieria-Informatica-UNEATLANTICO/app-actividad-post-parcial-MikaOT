@@ -1,0 +1,61 @@
+@startuml
+Title Diagrama De Objetos Mejorado
+
+object Usuario {
+    id: U12345
+    nombre: "Paco33"
+    email: Paco@gmail.com
+}
+
+object Anonimo {
+    id: U54321
+    nombre: user_3q4i0234
+}
+
+object Perfil {
+    id: P001
+    nombre: "Paco33"
+    email: Paco@gmail.com
+    contraseña: "1234"
+    suscripción: Premium
+}
+
+object Búsqueda {
+    cuadroDeBusqueda: "IRL"
+    fecha: "2024-11-15"
+    hora: "10:30"
+}
+
+object Contenido {
+    id: C67890
+    tipo: vlog
+    título: "Explorando IRL"
+    derechosDigitales: Sí
+    >=18: No
+    duración: "15:30"
+    vistas: 12345
+}
+
+object Categoria {
+    nombre: "IRL"
+    derechosDigitales: Sí
+    >=18: No
+}
+
+object Suscripción {
+    tipo: Premium
+    fechaInicio: "2024-01-01"
+    fechaFin: "2025-01-01"
+    precio: "$9.99/mes"
+}
+
+Anonimo --> Usuario : Acceso Limitado
+Perfil --> Usuario : Personalizado
+Usuario --> Búsqueda : Realiza
+Búsqueda --> Contenido : Encuentra
+Búsqueda --> Categoria : Filtra
+Contenido --> Categoria : Pertenece
+Perfil --> Suscripción : Tiene
+Anonimo ...> Contenido : Ve Contenido Gratis
+
+@enduml

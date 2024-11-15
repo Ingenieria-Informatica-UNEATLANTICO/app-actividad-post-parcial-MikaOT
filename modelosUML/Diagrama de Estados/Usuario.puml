@@ -1,0 +1,17 @@
+@startuml
+state c1 <<choice>>
+state c2 <<choice>>
+state c3 <<choice>>
+
+[*] --> Usuario
+Usuario --> c1 
+c1 --> Registro
+c1 --> InicioSesion
+c1 --> PerfilAnonimo
+Registro --> c2 : creo
+InicioSesion --> c2 : Accedo
+c2 --> Perfil
+Perfil --> c3
+PerfilAnonimo --> c3
+c3 --> [*]
+@enduml

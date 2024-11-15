@@ -1,0 +1,36 @@
+@startuml
+Title Diagrama De Objetos
+object Usuario
+object Anonimo{
+id: @xxxxxx
+name = user_3q4i0234
+}
+object Perfil{
+id: @xxxxxx
+name: "Paco33"
+email: Paco@gmail.com
+contraseña: 1234
+}
+object Búsqueda{
+cuadroDeBusqueda: "Irl"
+}
+object Contenido {
+tipo: vlog
+derechosDigitales: Si
+>=18? : No
+}
+object Categoria {
+Tipo: "Irl"
+Derechos Digitales: Si
+>=18? : No
+}
+
+Anonimo --> Usuario
+Perfil --> Usuario
+Usuario --> Búsqueda
+Búsqueda --> Perfil
+Búsqueda --> Contenido
+Búsqueda --> Categoria
+Contenido --> Categoria
+Anonimo ...> Contenido
+@enduml

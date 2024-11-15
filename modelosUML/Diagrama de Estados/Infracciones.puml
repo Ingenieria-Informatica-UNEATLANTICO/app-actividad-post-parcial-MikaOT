@@ -1,0 +1,15 @@
+@startuml
+
+state c1 <<choice>>
+
+[*] --> Perfil
+Perfil --> Aviso : incumple norma
+Aviso --> Baneo : if aviso >3
+Baneo --> c1
+c1 --> AltaGravedad
+c1 --> BajaGravedad
+AltaGravedad -->  Permanente
+BajaGravedad --> Temporal
+Permanente --> [*]
+Temporal --> [*]
+@enduml
